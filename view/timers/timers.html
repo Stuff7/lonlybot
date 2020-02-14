@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='Content-Security-Policy' 
+			content="default-src 'self';
+							 connect-src 'self' https://api.twitch.tv/;
+							 font-src 'self' https://fonts.gstatic.com/ https://fonts.googleapis.com/;
+							 script-src 'self';
+							 style-src 'self' https://fonts.gstatic.com/ https://fonts.googleapis.com/;"/>
+		<meta charset="UTF-8">
+		<title>LonlyBot</title>
+		<link rel="stylesheet" href="timers.css">
+		<script src="timers.js"></script>
+	</head>
+	<body>
+		<div class="btn-wrapper">
+			<button id="settings">SETTINGS</button>
+			<button id="disconnect">DISCONNECT BOT</button>
+		</div>
+		<div class="input-wrapper row fullwidth">
+			<p>Send every 2 seconds</p>
+			<input id="timer-intvl" type="range" min="0" max="333" value="10"/>
+			<form>
+			<div>
+				<input id="timer-name" class="fullwidth" required/>
+				<label for="timer-name">Timer's name</label>
+			</div>
+			<div>
+				<textarea id="timer-resp" class="fullwidth" autocomplete="off" required></textarea>
+				<label for="timer-resp">Timer's response</label>
+			</div>
+			<div>
+				<button id="timer-add" class="fullwidth">Add</button>
+			</div>
+			</form>
+			<ul></ul>
+		</div>
+		<input id="timers-run" type="checkbox" hidden/>
+		<label for="timers-run" class="fullwidth">RUN</label>
+	</body>
+</html>

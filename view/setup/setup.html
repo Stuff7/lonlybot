@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='Content-Security-Policy' 
+			content="default-src 'self';
+							 connect-src 'self' https://api.twitch.tv/;
+							 font-src 'self' https://fonts.gstatic.com/ https://fonts.googleapis.com/;
+							 script-src 'self';
+							 style-src 'self' https://fonts.gstatic.com/ https://fonts.googleapis.com/;"/>
+		<meta charset="UTF-8">
+		<title>Connect your bot</title>
+		<link rel="stylesheet" href="setup.css">
+		<script src="setup.js"></script>
+	</head>
+	<body>
+		<form>
+		<div class="input-wrapper row content fullwidth">
+			<div>
+				<input id="setup-channel" class="fullwidth" required/>
+				<label for="setup-channel">Your Twitch channel</label>
+			</div>
+			<div>
+				<input id="setup-bot" class="fullwidth" required/>
+				<label for="setup-bot">Your bot's name</label>
+			</div>
+		</div>
+		<div class="container">
+			<label class="switch"><input id="setup-autoconnect" type="checkbox" />    <div></div></label>
+			<label for="setup-autoconnect">Autoconnect <p>ON</p></label>
+		</div>
+		<input type="submit" id="setup-connect" class="fullwidth" value="Connect"/>
+		</form>
+	</body>
+</html>

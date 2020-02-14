@@ -1,0 +1,80 @@
+@import url(../base.css);
+
+#back {
+	background-color: brown;
+	border-radius: 0;
+	padding: 8px;
+}
+#back:hover {
+	background-color: crimson;
+	box-shadow: 0 0 6px -1px crimson !important;
+}
+.header {
+	height: 30vh;
+}
+
+.content {
+	height: 58vh;
+	overflow-y: auto;
+}
+
+.input-wrapper div {
+	flex: 1;
+	flex-grow: 0;
+}
+.input-wrapper div:first-child {
+	flex-grow: 1;
+}
+.input-wrapper div input, li input {
+	border-radius: 4px 0 0 4px;
+}
+.input-wrapper button, li button {
+	height: 100%;
+	white-space: nowrap;
+	padding: 4px;
+	border-radius: 0 4px 4px 0;
+}
+
+ul {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	list-style-type: none;
+	margin: 0 4%;
+}
+li {
+	padding: 2px;
+	display: flex;
+}
+li input {
+	background-color: #B491F433;
+	padding: 4px;
+	box-sizing: border-box;
+	width: 100%;
+}
+li input:focus {
+	background-color: #B491F499;
+}
+li button {
+	background-color: crimson;
+}
+li button:hover {
+	background-color: orangered;
+}
+
+.content ~ .input-wrapper {
+	height: 12vh;
+	position: absolute;
+	bottom: 0;
+	padding: 0;
+	margin: 0;
+}
+.content ~ .input-wrapper div, .content ~ .input-wrapper input {
+	flex: 1;
+	border-radius: 0;
+	text-align: center;
+}
+.content ~ .input-wrapper input:focus ~ label, .content ~ .input-wrapper input:valid ~ label {
+	background-color: transparent;
+	top: -2px;
+}

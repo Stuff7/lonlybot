@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='Content-Security-Policy' 
+			content="default-src 'self';
+							 connect-src 'self' https://api.twitch.tv/;
+							 font-src 'self' https://fonts.gstatic.com/ https://fonts.googleapis.com/;
+							 script-src 'self';
+							 style-src 'self' https://fonts.gstatic.com/ https://fonts.googleapis.com/;"/>
+		<meta charset="UTF-8">
+		<title>LonlyBot</title>
+		<link rel="stylesheet" href="settings.css">
+		<script src="settings.js"></script>
+	</head>
+	<body>
+		<div class="header">
+		<button id="back" class="fullwidth">GO BACK</button>
+		<form>
+			<div class="input-wrapper fullwidth">
+				<div>
+					<input id="editor-name" class="fullwidth" required/>
+					<label for="editor-name">Twitch username</label>
+				</div>
+				<div>
+					<button id="editor-add" class="fullwidth">Add editor</button>
+				</div>
+			</div>
+		</form>
+		</div>
+		<div class="content">
+		<ul></ul>
+		</div>
+		<div class="input-wrapper fullwidth">
+			<div>
+				<input class="fullwidth" id="timer-cmd" autocomplete="off" required/>
+				<label for="timer-cmd">Timer command</label>
+			</div>
+			<div>
+				<input class="fullwidth" id="intvl-cmd" autocomplete="off" required/>
+				<label for="intvl-cmd">Intvl command</label>
+			</div>
+		</div>
+	</body>
+</html>

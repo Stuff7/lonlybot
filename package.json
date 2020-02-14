@@ -1,0 +1,25 @@
+{
+  "name": "lonlybot",
+  "version": "1.0.0",
+  "description": "A Twitch bot for timers",
+  "main": "bot.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "test"
+  },
+  "keywords": [
+    "bot",
+    "twitch",
+    "timer"
+  ],
+  "author": "Armando",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^6",
+    "electron-packager": "*"
+  },
+  "dependencies": {
+    "node-fetch": "*",
+    "tmi.js": "*"
+  }
+}

@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway&display=swap);
+
+* {
+	background-color: #0F0E11;
+	color: #FAFAFA;
+	font: 24px "Raleway";
+	padding: 0;
+	margin: 0;
+	border-radius: 4px;
+}
+*::-webkit-scrollbar {
+	background-color: #151515;
+	width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: #404040;
+	border-radius: 4px;
+}
+.fullwidth {
+	width: 100%;
+	box-sizing: border-box;
+}
+.row {
+	flex-direction: column;
+}
+
+input, textarea, button, [type=submit] {
+	background-color: #6441A4;
+	border: 1px solid transparent;
+	transition: all .3s;
+}
+button:hover, [type=submit]:hover {
+	outline: none !important;
+	box-shadow: 0 0 6px -1px #7D5BBE !important;
+	background-color: #8461C4;
+}
+input, textarea {
+	padding:  24px;
+	background-color: #202020;
+}
+input:focus, input:active, button:focus, textarea:active, textarea:focus {
+	outline: none !important;
+}
+.input-wrapper {
+	display: flex;
+	padding: 4%;
+	justify-content: space-evenly;
+}
+.input-wrapper div {
+	position: relative;
+	width: 100%;
+}
+.input-wrapper label {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select:none;
+	user-select: none;
+	cursor: text;
+	pointer-events: none;
+	background-color: transparent;
+	position: absolute;
+	left: 32px;
+	top: 24px;
+	color: #505050;
+	transition: all .15s;
+}
+.input-wrapper input:focus ~ label, .input-wrapper input:valid ~ label,
+.input-wrapper textarea:focus ~ label, .input-wrapper textarea:valid ~ label {
+	background-color: #0F0E11;
+	color: #7D5BBE;
+	top: -18px;
+}
+.input-wrapper input:focus, .input-wrapper input:valid,
+.input-wrapper textarea:focus, .input-wrapper textarea:valid {
+	box-shadow: 0 0 6px -2px #7D5BBE !important;
+	background-color: #0F0E11;
+	border: 1px solid #7D5BBE;
+}
+.input-wrapper input:invalid, .input-wrapper textarea:invalid {
+	box-shadow: none;
+}
